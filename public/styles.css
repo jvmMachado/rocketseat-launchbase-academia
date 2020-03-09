@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:root {
+  --primary-color: #7159c1;
+  --secondary-color: #f7df1e;
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.links {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #777;
+  position: relative;
+}
+
+.links a + a {
+  margin-left: 32px;
+}
+
+.links a.active {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.links a:hover {
+  color: var(--primary-color);
+}
+
+.links a::before {
+}
+
+.links a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--primary-color);
+}
+
+.links a:hover::after {
+  width: 100%;
+  transition: width 200ms ease-in-out;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ======== CARD ======== */
+
+.card {
+  background-color: white;
+  width: 800px;
+  min-height: 400px;
+  border-radius: 5px;
+
+  margin: 45px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 4px 5px 9px -3px rgba(0, 0, 0, 0.4);
+
+  animation: up 700ms ease-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.avatar {
+  background: url(https://source.unsplash.com/collection/8353395/500x500)
+    no-repeat center center / cover;
+  border-radius: 5px 0 0 5px;
+}
+
+.details {
+  padding: 32px;
+}
+
+.details .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.details .item:last-child {
+  border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+  color: #777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
