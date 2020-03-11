@@ -13,4 +13,12 @@ routes.get('/members', (req, res) => {
   return res.render('members');
 });
 
+routes.get('/instructors/create', (req, res) => {
+  return res.render('instructors/create');
+});
+
+routes.post('/instructors', (req, res) => {
+  return res.send('Form received');
+});
+
 module.exports = routes;
