@@ -1,0 +1,22 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "João Machado",
+      "birth": 784857600000,
+      "gender": "M",
+      "services": "Musculação, Crossfit, Natação",
+      "created_at": 1583955268930
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Gustavo Alvarenga",
+      "birth": 787190400000,
+      "gender": "M",
+      "services": "Crossfit",
+      "created_at": 1583955285357
+    }
+  ]
+}
