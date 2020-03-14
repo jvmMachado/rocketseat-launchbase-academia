@@ -2,7 +2,7 @@
   "instructors": [
     {
       "id": 1,
-      "avatar_url": "http://google.com",
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
       "name": "João Machado",
       "birth": 784857600000,
       "gender": "M",
@@ -11,12 +11,21 @@
     },
     {
       "id": 2,
-      "avatar_url": "http://google.com",
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
       "name": "Gustavo Alvarenga",
       "birth": 787190400000,
       "gender": "M",
       "services": "Crossfit",
       "created_at": 1583955285357
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "name": "Teste",
+      "birth": 949363200000,
+      "gender": "F",
+      "services": "Natação",
+      "created_at": 1584213397237
     }
   ]
 }

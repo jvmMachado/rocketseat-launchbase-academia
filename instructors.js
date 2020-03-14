@@ -32,7 +32,7 @@ exports.show = (req, res) => {
     ...foundInstructor,
     age: age(foundInstructor.birth),
     services: foundInstructor.services.split(','),
-    created_at: ''
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at)
   };
 
   return res.render('instructors/show', { instructor });
@@ -75,5 +75,24 @@ exports.post = (req, res) => {
 };
 
 // Update
+
+exports.edit = (req, res) => {
+const {id} = req.params;
+
+let foundInstructor = data.instructors.find( instructor => {
+  return instructor.id == id;
+});
+
+if (!foundInstructor) return res.send('Instructor not found.');
+
+const instructor = {
+  ...foundInstructor,
+  birth: new Intl.DateTimeFormat('ko-KR', {timeZone: 'UTC', year: 'numeric', month: '2-digit', day: '2-digit'}).format(foundInstructor.birth).split('. ').join('-').split('.').join('')
+}
+
+console.log(instructor.birth)
+
+return res.render('instructors/edit', { instructor })
+};
 
 // Delete
