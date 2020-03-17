@@ -6,7 +6,7 @@
       "name": "João Machado",
       "birth": 784857600000,
       "gender": "M",
-      "services": "Musculação, Crossfit, Natação",
+      "services": "Musculação, Crossfit",
       "created_at": 1583955268930
     },
     {
@@ -21,11 +21,11 @@
     {
       "id": 3,
       "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
-      "name": "Teste",
-      "birth": 949363200000,
-      "gender": "F",
-      "services": "Natação",
-      "created_at": 1584213397237
+      "name": "Alexandre Andrade",
+      "birth": 432518400000,
+      "gender": "M",
+      "services": "Crossfit",
+      "created_at": 1584387436131
     }
   ]
 }
