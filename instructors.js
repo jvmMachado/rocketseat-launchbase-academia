@@ -2,7 +2,16 @@ const fs = require('fs');
 const data = require('./data.json');
 
 exports.index = (req, res) => {
-  return res.render('instructors/index', { instructors: data.instructors });
+  let instructors = data.instructors;
+  let newInstructors;
+
+  newInstructors = instructors.map(instructor => {
+    instructor.services = instructor.services.toString().split(',');
+  });
+
+  console.log(newInstructors);
+
+  return res.render('instructors/index', { instructors: instructors });
 };
 
 // Show
@@ -35,7 +44,7 @@ exports.show = (req, res) => {
   const instructor = {
     ...foundInstructor,
     age: age(foundInstructor.birth),
-    services: foundInstructor.services.split(','),
+    services: foundInstructor.services.toString().split(','),
     created_at: new Intl.DateTimeFormat('pt-BR', {
       timeZone: 'UTC',
       day: '2-digit',
