@@ -6,7 +6,10 @@
       "name": "João Machado",
       "birth": 784857600000,
       "gender": "M",
-      "services": "Musculação, Crossfit",
+      "services": [
+        "Musculação",
+        " Crossfit"
+      ],
       "created_at": 1583955268930
     },
     {
@@ -15,7 +18,9 @@
       "name": "Gustavo Alvarenga",
       "birth": 787190400000,
       "gender": "M",
-      "services": "Crossfit",
+      "services": [
+        "Crossfit"
+      ],
       "created_at": 1583955285357
     },
     {
@@ -24,8 +29,23 @@
       "name": "Alexandre Andrade",
       "birth": 432518400000,
       "gender": "M",
-      "services": "Crossfit",
+      "services": [
+        "Crossfit"
+      ],
       "created_at": 1584387436131
+    }
+  ],
+  "members": [
+    {
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "name": "Digão",
+      "email": "diego.braga@mrg.com",
+      "birth": 708739200000,
+      "gender": "M",
+      "blood": "AB+",
+      "weight": "89",
+      "height": "176",
+      "id": 1
     }
   ]
 }

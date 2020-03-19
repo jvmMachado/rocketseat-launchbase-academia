@@ -1,5 +1,5 @@
 const fs = require('fs');
-const data = require('./data.json');
+const data = require('../data.json');
 
 exports.index = (req, res) => {
   let instructors = data.instructors;
@@ -9,12 +9,8 @@ exports.index = (req, res) => {
     instructor.services = instructor.services.toString().split(',');
   });
 
-  console.log(newInstructors);
-
   return res.render('instructors/index', { instructors: instructors });
 };
-
-// Show
 
 exports.show = (req, res) => {
   const { id } = req.params;
@@ -56,7 +52,11 @@ exports.show = (req, res) => {
   return res.render('instructors/show', { instructor });
 };
 
-// Create
+exports.create = (req, res) => {
+  return res.render('instructors/create');
+};
+
+// Post
 
 exports.post = (req, res) => {
   const keys = Object.keys(req.body);
